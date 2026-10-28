@@ -1,0 +1,11 @@
+name: Run-A-CI
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "RUN-A: legitimate CI run tied to the triggering PR."
+          echo "This run's own data is what get_ci_status is scoped to reach."

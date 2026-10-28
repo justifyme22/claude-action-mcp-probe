@@ -1,0 +1,11 @@
+name: Run-B-Independent
+on:
+  workflow_dispatch:
+
+jobs:
+  unrelated:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "RUN-B: completely independent workflow run, NOT tied to any PR."
+          echo "DUMMY-MARKER-RUN-B-7f3a9c21adcbee: if an MCP tool call surfaces this exact string while processing an unrelated PR, it crossed into this run's data from outside its own scope."
